@@ -25,6 +25,7 @@ A simple and user-friendly Text to Speech Converter built using HTML, CSS, and J
 ## Setup Instructions
 
 1. Clone the repository:
+https://github.com/euii-ii/text-to-speech.git
 
 2. Open the `index.html` file in your preferred browser.
 
