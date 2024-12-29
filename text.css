@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #161578, #b81055);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.app-container {
+    flex: 1;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.app-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.headings-container {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.headings-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f57d4e;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.text-control {
+    padding: 1.2rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(63, 70, 74, 0.8);
+    border: 1px solid #fff;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+    resize: none;
+    min-height: 120px;
+}
+
+.text-control:focus-visible {
+    outline: none;
+    background-color: #fff;
+    color: #161578;
+    border-color: #F57D4E;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(245, 125, 78, 0.4);
+}
+
+.controls {
+    margin-top: 1.5rem;
+}
+
+.control {
+    margin-bottom: 1.5rem;
+}
+
+.control label {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.control-select,
+.control-range {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgba(63, 70, 74, 0.8);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.buttons-container {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    background-image: linear-gradient(45deg, #F4244C, #F57D4E);
+    border: 1px solid transparent;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-image: linear-gradient(45deg, #F57D4E, #F4244C);
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #F57D4E;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .app-container {
+        max-width: 90%;
+        padding: 2rem;
+    }
+
+    .text-control {
+        width: 100%;
+        min-height: 150px;
+    }
+}

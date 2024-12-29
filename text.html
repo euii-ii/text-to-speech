@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-container">
+            <div class="headings-container">
+                <h1>Text to Speech Converter</h1>
+            </div>
+
+            <div class="interaction-container">
+                <textarea id="textToConvert" placeholder="Enter text to convert into speech..." cols="35" rows="10" class="text-control"></textarea>
+
+                <p class="error-para"></p>
+
+                <!-- Controls for voice selection, speed, volume -->
+                <div class="controls">
+                    <div class="control">
+                        <label for="voiceSelect">Select Voice:</label>
+                        <select id="voiceSelect" class="control-select">
+                            <!-- Options will be populated by JS -->
+                        </select>
+                    </div>
+
+                    <div class="control">
+                        <label for="speedSelect">Speed:</label>
+                        <input type="range" id="speedSelect" min="0.5" max="2" step="0.1" value="1" class="control-range">
+                    </div>
+
+                    <div class="control">
+                        <label for="volumeSelect">Volume:</label>
+                        <input type="range" id="volumeSelect" min="0" max="1" step="0.1" value="1" class="control-range">
+                    </div>
+                </div>
+
+                <!-- Buttons for functionality -->
+                <div class="buttons-container">
+                    <button class="btn" id="convertBtn">Convert</button>
+                    <button class="btn" id="clearBtn">Clear</button>
+                    <button class="btn" id="pauseBtn">Pause</button>
+                </div>
+
+                <div id="progressContainer" class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="text.js"></script>
+</body>
+
+</html>
