@@ -31,9 +31,9 @@ https://github.com/euii-ii/text-to-speech.git
 
 ## Code Structure
 
-- **index.html**: The main HTML file containing the structure of the app.
-- **style.css**: The CSS file for styling the application.
-- **script.js**: The JavaScript file that implements the text-to-speech functionality.
+- **text.html**: The main HTML file containing the structure of the app.
+- **text.css**: The CSS file for styling the application.
+- **text.js**: The JavaScript file that implements the text-to-speech functionality.
 
 ## License
 
